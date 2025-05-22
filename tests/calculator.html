@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Calculator</title>
+  <script>
+    function getNumbers() {
+      return [
+        Number(document.getElementById('input1').value),
+        Number(document.getElementById('input2').value),
+        Number(document.getElementById('input3').value)
+      ];
+    }
+
+    function showResult(value) {
+      document.getElementById('result').innerText = value;
+    }
+
+    function add() {
+      let nums = getNumbers();
+      let sum = nums.reduce((a, b) => a + b, 0);
+      showResult(sum);
+    }
+
+    function subtract() {
+      let nums = getNumbers();
+      let diff = nums.reduce((a, b) => a - b);
+      showResult(diff);
+    }
+
+    function multiply() {
+      let nums = getNumbers();
+      let product = nums.reduce((a, b) => a * b, 1);
+      showResult(product);
+    }
+
+    function divide() {
+      let nums = getNumbers();
+      let quotient = nums.reduce((a, b) => a / b);
+      showResult(quotient);
+    }
+  </script>
+</head>
+<body>
+  <h2>Simple Calculator</h2>
+
+  <input id="input1" type="number" value="0" />
+  <input id="input2" type="number" value="0" />
+  <input id="input3" type="number" value="0" />
+  <br><br>
+
+  <button id="add-btn" onclick="add()">Add</button>
+  <button id="subtract-btn" onclick="subtract()">Subtract</button>
+  <button id="multiply-btn" onclick="multiply()">Multiply</button>
+  <button id="divide-btn" onclick="divide()">Divide</button>
+  <br><br>
+
+  Result: <span id="result">0</span>
+</body>
+</html>
