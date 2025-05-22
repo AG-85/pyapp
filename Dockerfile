@@ -3,6 +3,6 @@ FROM python:3.12-slim
 
 WORKDIR /app
 
-COPY src/book_inventory/inventory.py .
+COPY src/pyapp/app.py .
 
-CMD ["python3", "inventory.py"]
+CMD ["python3", "app.py"]
