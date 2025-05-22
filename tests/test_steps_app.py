@@ -5,7 +5,7 @@ import src.pyapp.app as app
 
 scenarios("test_app.feature")
 
-
+#notice context is a function but used as a parameter in given , when and then. So, function name is acting like a variable
 @pytest.fixture
 def context():
     return {}
