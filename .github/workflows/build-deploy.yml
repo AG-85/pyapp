@@ -50,3 +50,4 @@ jobs:
 
       - name: Terraform Apply
         run: terraform -chdir=terraform apply -auto-approve
+        env: TF_VAR_github_owner: ag-85
