@@ -34,3 +34,7 @@ def division(numbers):
         total /= num
     return total
 
+if __name__ == "__main__":
+    print("calculating")
+    print(addition([1, 2, 3]))
+    print(subtraction([1, 2, 3]))
